@@ -1,0 +1,7 @@
+{
+  "name": "maid-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
