@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "maid-app",
+  "appId": "com.acarolsf",
+  "appName": "Maids",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
