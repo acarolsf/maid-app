@@ -1,4 +1,7 @@
 
+ion-searchbar {
+    --border-radius: 10px;
+}
 .categoria {
     width: 117px;
     height: 77px;
@@ -17,6 +20,20 @@
     color: white;
 }
 
-rating {
+.rating {
     font-size: 30px;
+}
+
+.number {
+    color: tomato;
+}
+
+.nome {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+
+.cidade, h2 {
+    opacity: .7;
 }

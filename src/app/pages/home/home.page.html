@@ -13,6 +13,8 @@
 
   <ion-searchbar placeholder="Buscar" (ionChange)="onSearchChange($event)"></ion-searchbar>
 
+  <h2>Por Categoria</h2>
+
   <ion-slides pager="true" [options]="slidesOpt">
     <ion-slide *ngFor="let item of slideItems">
       <ion-card class="categoria" >
@@ -26,6 +28,29 @@
     </ion-slide>
   </ion-slides>
 
-  <rating [rating]="4"></rating>
+  <!-- <rating [rating]="4"></rating> -->
 
+  <h2>Classificação</h2>
+
+  <ion-list *ngFor="let ppl of ranking; index as i">
+    <ion-item>
+      <div slot="start">
+        <ion-avatar>
+          <img src="assets/profile.jpg" />
+        </ion-avatar>
+      </div>
+      <div>
+        <div class="nome">
+          <span class="number">{{i + 1}}</span>
+          {{ppl.nome}}
+        </div>
+        <div class="cidade">
+          {{ppl.cidade}}
+        </div>
+      </div>
+      <span class="rating">
+        <rating item-content rating={{ppl.rating}}></rating>
+      </span>
+    </ion-item>
+  </ion-list>
 </ion-content>

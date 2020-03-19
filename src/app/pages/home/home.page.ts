@@ -22,7 +22,11 @@ export class HomePage implements OnInit {
   slideItems: Array<{title: string, icon: string, link: string}>;
   ranking: Array<{nome: string, rating: string, cidade: string, link: string}>;
 
-  constructor(private menuController: MenuController) { 
+  constructor(private menuController: MenuController) {
+    this.initializeItems();
+  }
+
+  initializeItems() {
     this.slideItems = [];
     this.slideItems.push({
       title: 'Babá',
@@ -37,6 +41,68 @@ export class HomePage implements OnInit {
     this.slideItems.push({
       title: 'Eletricistas',
       icon: 'flash',
+      link: ''
+    });
+
+    this.ranking = [];
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
+      link: ''
+    });
+    this.ranking.push({
+      nome: 'Ana',
+      rating: '5',
+      cidade: 'Caicó',
       link: ''
     });
   }

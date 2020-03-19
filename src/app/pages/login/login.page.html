@@ -1,7 +1,41 @@
-
 <ion-content>
-<ion-button routerLink='/home' routerDirection="root" expand="block" fill="clear" shape="round">
-  Click me
-</ion-button>
-<rating [rating]="3"></rating>
+  <div class="image-logo">
+    <img src="assets/maid-logo.png" alt="Logo do App é a letra M" />
+  </div>
+
+  <div class="blackBackground">
+    <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
+    <form class="form">
+      <ion-item class="input-form">
+        <ion-label position="floating">E-Mail <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <!-- <ion-input required formControlName="email" type="text"></ion-input> -->
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+      <ion-item class="input-form">
+        <ion-label position="floating">Password <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <!-- <ion-input required formControlName="password" type="text"></ion-input> -->
+        <ion-input required type="password"></ion-input>
+      </ion-item>
+      <ion-button block color="primary" type="submit" fill="white" shape="round" routerLink="/home"
+        routerDirection="root">
+        <!--[disabled]="loginForm.invalid">-->
+        Login
+      </ion-button>
+    </form>
+    
+    <div class="forgot">
+      <ion-text color="light">
+        Esqueceu sua senha?
+      </ion-text>
+    </div>
+
+    <div class="cadastre">
+      <ion-text color="light">
+        Cadastre-se
+      </ion-text>
+    </div>
+
+  </div>
 </ion-content>
