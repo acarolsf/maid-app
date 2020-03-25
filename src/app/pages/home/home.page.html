@@ -34,23 +34,23 @@
 
   <ion-list *ngFor="let ppl of ranking; index as i">
     <ion-item>
-      <div slot="start">
+      <div class="number" slot="start">{{i + 1}}</div>
+      <div>
         <ion-avatar>
           <img src="assets/profile.jpg" />
         </ion-avatar>
       </div>
       <div>
         <div class="nome">
-          <span class="number">{{i + 1}}</span>
           {{ppl.nome}}
         </div>
         <div class="cidade">
           {{ppl.cidade}}
         </div>
       </div>
-      <span class="rating">
+      <div class="rating" slot="end">
         <rating item-content rating={{ppl.rating}}></rating>
-      </span>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>

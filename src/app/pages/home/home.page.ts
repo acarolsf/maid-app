@@ -21,6 +21,7 @@ export class HomePage implements OnInit {
   };
   slideItems: Array<{title: string, icon: string, link: string}>;
   ranking: Array<{nome: string, rating: string, cidade: string, link: string}>;
+  menuContent: string;
 
   constructor(private menuController: MenuController) {
     this.initializeItems();
@@ -46,61 +47,61 @@ export class HomePage implements OnInit {
 
     this.ranking = [];
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
     });
     this.ranking.push({
-      nome: 'Ana',
+      nome: 'Ana Carolina',
       rating: '5',
       cidade: 'Caicó',
       link: ''
@@ -108,7 +109,9 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
+    // this.menuController.enable(true, 'empregada-menu');
     this.menuController.enable(true);
+    this.menuController.open('empregadorMenu');
   }
 
   onSearchChange(event) {

@@ -7,7 +7,64 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  comments: Array<{nome: string, cidade: string, rating: string, comentario: string}>;
+  constructor() {
+    this.comments = [];
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+    this.comments.push({
+      nome: 'Cleide',
+      cidade: 'Seattle',
+      rating: '4',
+      comentario: 'Muito boa, recomendo sempre!'
+    });
+  }
 
   ngOnInit() {
   }

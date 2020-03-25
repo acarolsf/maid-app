@@ -1,23 +1,44 @@
-.profile-header {
-    margin-left: 25px;
-}
-ion-avatar {
+
+.profile {
     width: 80px;
     height: 80px;
+    margin-top: 20px;
 }
 .function {
     font-size: 15px;
     opacity: .6;
 }
-ion-button {
-    --color: #000;
-    --background: #fff;
-    --box-shadow: none;
-    --border-width: 20px;
-    --border-color: #000;
-}
-.classification {
+.button {
     text-align: center;
+    margin-top: 10px;
+}
+.button ion-button {
+    height: 30px;
+    width: 300px;
+}
+.classificacao {
+    text-align: center;
+}
+.classificacao rating {
     font-size: 50px;
-    size: 50px;
+    height: 100px;
+    width: 100px;
+}
+.filtro {
+    opacity: .7;
+    font-size: 12px;
+}
+.card {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    --border-color: #101010;
+    --border-width: 2px;
+}
+.card-image {
+    width: 50px;
+    height: 50px;
+}
+.comentario {
+    margin-left: 30px;
 }

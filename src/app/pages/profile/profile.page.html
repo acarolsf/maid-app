@@ -6,10 +6,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="profile-header">
-    <ion-item>
-      <ion-avatar slot="start">
+<ion-content class="ion-padding">
+  <div class="profile-header ion-no-padding">
+    <ion-item lines="none">
+      <ion-avatar class="profile" slot="start">
         <img src="assets/profile.jpg" />
       </ion-avatar>
       <div>
@@ -24,15 +24,56 @@
   </div>
 
   <div class="button">
-    <ion-button expand="block" shape="round">
+    <ion-button shape="round" color="dark" fill="outline">
       Editar Perfil
     </ion-button>
   </div>
 
-  <h2>Classificação</h2>
+  <h4>Classificação</h4>
 
   <div class="classificacao">
     <rating rating="4"></rating>
   </div>
+
+  <ion-row>
+    <ion-col size="6">
+      <h4>Recomendações</h4>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item class="filtro" lines="none">
+        <ion-select value="mr">
+          <ion-select-option value="mr">Mais relevantes</ion-select-option>
+          <ion-select-option value="rating">Por classificação</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+   
+  <ion-list *ngFor='let comment of comments'>
+    <ion-item lines="none">
+      <ion-card class="card">
+        <ion-item lines="none">
+          <ion-avatar class="card-image" slot="start">
+            <img src="assets/profile.jpg" />
+          </ion-avatar>
+          <div>
+          <div class="name">
+            <h5>{{comment.nome}}</h5>
+          </div>
+          <div class="function">
+            <ion-label>{{comment.cidade}}</ion-label>
+          </div>
+        </div>
+        </ion-item>
+        <ion-item slot="end" lines="none">
+          <rating rating=4></rating>
+        </ion-item>
+        <div class="comentario">
+          <p>{{comment.comentario}}</p>
+        </div>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
 
 </ion-content>

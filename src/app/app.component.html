@@ -1,6 +1,6 @@
 <ion-app>
-  <ion-split-pane contentId="empregador-menu">
-    <ion-menu contentId="empregador-menu" type="overlay">
+  <ion-split-pane contentId="empregadorMenu">
+    <ion-menu contentId="empregadorMenu" menuId="empregadorMenu" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Empregador</ion-list-header>
@@ -15,11 +15,11 @@
         </ion-list>
       </ion-content>
     </ion-menu>
-    <ion-router-outlet id="empregador-menu"></ion-router-outlet>
+    <ion-router-outlet id="empregadorMenu"></ion-router-outlet>
   </ion-split-pane>
 
-  <ion-split-pane contentId="empregada-menu">
-    <ion-menu contentId="empregada-menu" type="overlay">
+  <ion-split-pane contentId="empregadaMenu">
+    <ion-menu contentId="empregadaMenu" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Empregada</ion-list-header>
@@ -34,6 +34,6 @@
         </ion-list>
       </ion-content>
     </ion-menu>
-    <ion-router-outlet id="empregada-menu"></ion-router-outlet>
+    <ion-router-outlet id="empregadaMenu"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>
