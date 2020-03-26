@@ -18,7 +18,20 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
-  }
+  },
+  {
+    path: '',
+    loadChildren: () => import('./pages/historico/historico.module').then( m => m.HistoricoPageModule)
+  },
+  // {
+  //   path: 'agendadas',
+  //   loadChildren: () => import('./pages/agendadas/agendadas.module').then( m => m.AgendadasPageModule)
+  // },
+  // {
+  //   path: 'anteriores',
+  //   loadChildren: () => import('./pages/anteriores/anteriores.module').then( m => m.AnterioresPageModule)
+  // }
+
 ];
 
 @NgModule({

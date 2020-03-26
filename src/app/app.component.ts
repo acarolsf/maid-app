@@ -22,6 +22,11 @@ export class AppComponent implements OnInit {
       url: '/profile',
       icon: 'person'
     },
+    {
+      title: 'Histórico',
+      url: '/historico',
+      icon: 'history'
+    }
   ];
   public employerPages = [
     {
@@ -33,6 +38,11 @@ export class AppComponent implements OnInit {
       title: 'Perfil',
       url: '/profile',
       icon: 'person'
+    },
+    {
+      title: 'Histórico',
+      url: '/historico',
+      icon: 'history'
     }
   ];
 
