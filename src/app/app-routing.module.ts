@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/historico/historico.module').then( m => m.HistoricoPageModule)
+  },  {
+    path: 'servico-detail',
+    loadChildren: () => import('./pages/servico-detail/servico-detail.module').then( m => m.ServicoDetailPageModule)
   },
+
   // {
   //   path: 'agendadas',
   //   loadChildren: () => import('./pages/agendadas/agendadas.module').then( m => m.AgendadasPageModule)
