@@ -1,0 +1,7 @@
+ion-tab-button {
+    --ripple-color: #101010;
+    --color-selected: #101010;
+}
+ion-tab-button[aria-selected=true] {
+    border-bottom: solid #101010 !important;
+}

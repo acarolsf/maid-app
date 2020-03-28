@@ -34,7 +34,8 @@ const routes: Routes = [
       special: DataResolverService
     },
     loadChildren: () => import('./pages/servico-detail/servico-detail.module').then( m => m.ServicoDetailPageModule)
-  },  {
+  },
+  {
     path: 'editar-dados',
     loadChildren: () => import('./pages/editar-dados/editar-dados.module').then( m => m.EditarDadosPageModule)
   },
@@ -44,18 +45,14 @@ const routes: Routes = [
   },
   {
     path: 'solicitar-servico-servicos',
-    loadChildren: () => import('./pages/solicitar-servico-servicos/solicitar-servico-servicos.module').then( m => m.SolicitarServicoServicosPageModule)
-  }
-
-
-  // {
-  //   path: 'agendadas',
-  //   loadChildren: () => import('./pages/agendadas/agendadas.module').then( m => m.AgendadasPageModule)
-  // },
-  // {
-  //   path: 'anteriores',
-  //   loadChildren: () => import('./pages/anteriores/anteriores.module').then( m => m.AnterioresPageModule)
-  // }
+    loadChildren: () =>
+      import('./pages/solicitar-servico-servicos/solicitar-servico-servicos.module')
+        .then( m => m.SolicitarServicoServicosPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./pages/solicitacoes/solicitacoes.module').then( m => m.SolicitacoesPageModule)
+  },
 
 ];
 

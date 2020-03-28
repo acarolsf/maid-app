@@ -43,6 +43,11 @@ export class AppComponent implements OnInit {
       title: 'Histórico',
       url: '/historico',
       icon: 'list'
+    },
+    {
+      title: 'Solicitações',
+      url: '/solicitacoes',
+      icon: 'list'
     }
   ];
 
