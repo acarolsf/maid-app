@@ -1,0 +1,81 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="edit-profile">
+
+    <div lines="none" class="img-profile">
+      <ion-avatar class="profile-image">
+        <img src="assets/profile.jpg" />
+      </ion-avatar>
+    </div>
+
+    <div class="form-edit">
+
+      <form>
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-label position="floating">
+            Nome <ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-label position="floating">
+            Tipo de Conta <ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-select value="">
+            <ion-select-option value="empregador">Empregador</ion-select-option>
+            <ion-select-option value="empregado">Empregado</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-label position="stacked">
+            Endereço <ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input type="text" placeholder="CEP"></ion-input>
+          <ion-input type="text" placeholder="Logradouro"></ion-input>
+          <ion-input type="text" placeholder="Número"></ion-input>
+          <ion-input type="text" placeholder="Bairro"></ion-input>
+          <ion-input type="text" placeholder="Cidade"></ion-input>
+          <ion-input type="text" placeholder="Estado"></ion-input>
+          
+        </ion-item>
+
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-label position="floating">
+            Email <ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-label position="floating">
+            Telefone <ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input type="tel"></ion-input>
+        </ion-item>
+
+        <div class="ion-padding">
+          <ion-button 
+            type="submit"
+            color="dark"
+            shape="round"
+            class="ion-no-margin"
+            routerLink="/profile"
+          >Salvar</ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</ion-content>

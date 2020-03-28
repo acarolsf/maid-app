@@ -34,7 +34,11 @@ const routes: Routes = [
       special: DataResolverService
     },
     loadChildren: () => import('./pages/servico-detail/servico-detail.module').then( m => m.ServicoDetailPageModule)
+  },  {
+    path: 'editar-dados',
+    loadChildren: () => import('./pages/editar-dados/editar-dados.module').then( m => m.EditarDadosPageModule)
   }
+
 
   // {
   //   path: 'agendadas',
