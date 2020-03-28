@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-anteriores',
@@ -18,7 +20,7 @@ export class AnterioresPage implements OnInit {
     horario: string
   }>;
 
-  constructor() {
+  constructor(private router: Router, private dataService: DataService) {
     this.items = [];
     this.items.push({
       data: '20/02/2020',
@@ -84,6 +86,11 @@ export class AnterioresPage implements OnInit {
 
 
   ngOnInit() {
+  }
+
+  openDetail(item, id) {
+    this.dataService.setData(id, item);
+    this.router.navigateByUrl('/servico-detail/' + id);
   }
 
 }

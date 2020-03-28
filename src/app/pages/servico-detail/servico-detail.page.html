@@ -1,49 +1,79 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>servico-detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhe</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-  <div #map id="map" [hidden]="!user"></div>
- 
-  <div *ngIf="user">
- 
-    <ion-item>
-      <ion-label>User ID: {{ user.uid }}</ion-label>
+<ion-content class="ion-padding">
+  <ion-item lines="none" class="header">
+    <div class="data" slot="start">
+      <strong>{{data.data}}</strong>
+    </div>
+    <div class="forma-pagamento" slot="end">
+      {{data.formaDePagamento}}
+    </div>
+  </ion-item>
+  <!-- EMPREGADOR -->
+  <div class="empregador">
+    <ion-item lines="none">
+      <div class="avatar" slot="start">
+        <ion-avatar>
+          <img src="assets/profile.jpg" />
+        </ion-avatar>
+      </div>
+      <div>
+        <div class="nome">
+          {{data.empregador}}
+        </div>
+        <div class="funcao">
+          <p>Empregador</p>
+        </div>
+      </div>
     </ion-item>
- 
-    <ion-button expand="block" (click)="startTracking()" *ngIf="!isTracking">
-      <ion-icon name="locate" slot="start"></ion-icon>
-      Start Tracking
-    </ion-button>
- 
-    <ion-button expand="block" (click)="stopTracking()" *ngIf="isTracking">
-      <ion-icon name="hand" slot="start"></ion-icon>
-      Stop Tracking
-    </ion-button>
- 
-    <ion-list>
-      <ion-item-sliding *ngFor="let pos of locations | async">
-        <ion-item>
-          <ion-label text-wrap>
-            Lat: {{ pos.lat }}
-            Lng: {{ pos.lng }}
-            <p>
-              {{ pos.timestamp | date:'short' }}
-            </p>
-          </ion-label>
-        </ion-item>
- 
-        <ion-item-options side="start">
-          <ion-item-option color="danger" (click)="deleteLocation(pos)">
-            <ion-icon name="trash" slot="icon-only"></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
- 
-      </ion-item-sliding>
-    </ion-list>
- 
+  </div>
+  <!-- EMPREGADO -->
+  <div class="empregado">
+    <ion-item lines="none">
+      <div class="avatar" slot="start">
+        <ion-avatar>
+          <img src="assets/profile.jpg" />
+        </ion-avatar>
+      </div>
+      <div>
+        <div class="nome">
+          {{data.empregado}}
+        </div>
+        <div class="funcao">
+          <p>Empregado</p>
+        </div>
+      </div>
+    </ion-item>
+  </div>
+
+  <div class="descricao">
+    <strong>Descrição: </strong> 
+    <div class="conteudo">
+      Cuidar de uma criança de 3 anos, arrumar a casa, fazer a comida da criança.
+    </div>
+  </div>
+
+  <div class="endereco">
+    <strong>Endereço: </strong> {{data.local}}
+  </div>
+
+  <div class="horario">
+    <strong>Horário: </strong> {{data.horario}}
+  </div>
+
+  <div class="localizacao">
+    
+    <strong>Localização</strong>
+
+    <div class="mapa">
+      <app-mapa></app-mapa>
+    </div>
   </div>
 </ion-content>

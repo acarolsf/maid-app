@@ -14,7 +14,7 @@
 }
 .button ion-button {
     height: 30px;
-    width: 300px;
+    display: block;
 }
 .classificacao {
     text-align: center;
@@ -30,8 +30,9 @@
 }
 .card {
     height: auto;
-    width: 100%;
-    border: none;
+    width: 100%!important;
+    border: solid #101010;
+    border-width: 1px;
 }
 .card-image {
     width: 50px;

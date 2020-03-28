@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Histórico',
       url: '/historico',
-      icon: 'history'
+      icon: 'list'
     }
   ];
   public employerPages = [
@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Histórico',
       url: '/historico',
-      icon: 'history'
+      icon: 'list'
     }
   ];
 

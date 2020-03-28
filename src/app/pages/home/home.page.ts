@@ -111,7 +111,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
     // this.menuController.enable(true, 'empregada-menu');
     this.menuController.enable(true);
-    this.menuController.open('empregadorMenu');
+    // this.menuController.open('empregadorMenu');
   }
 
   onSearchChange(event) {

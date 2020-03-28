@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { DataResolverService } from './resolver/data-resolver.service';
 
 const routes: Routes = [
   {
@@ -22,10 +23,18 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/historico/historico.module').then( m => m.HistoricoPageModule)
-  },  {
+  },
+  {
     path: 'servico-detail',
     loadChildren: () => import('./pages/servico-detail/servico-detail.module').then( m => m.ServicoDetailPageModule)
   },
+  {
+    path: 'servico-detail/:id',
+    resolve: {
+      special: DataResolverService
+    },
+    loadChildren: () => import('./pages/servico-detail/servico-detail.module').then( m => m.ServicoDetailPageModule)
+  }
 
   // {
   //   path: 'agendadas',
