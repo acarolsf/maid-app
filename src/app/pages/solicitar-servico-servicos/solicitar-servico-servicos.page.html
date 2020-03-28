@@ -1,0 +1,70 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Solicitar Serviço</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="empregado">
+    <ion-item lines="none" class="item-line ion-no-padding">
+      <div class="avatar" slot="start">
+        <ion-avatar>
+          <img src="assets/profile.jpg" />
+        </ion-avatar>
+      </div>
+      <div>
+        <div class="nome">
+          Malika Lee
+        </div>
+        <div class="funcao">
+          <p>Empregado</p>
+        </div>
+      </div>
+    </ion-item>
+  </div>
+
+  <div class="edit">
+    <ion-list>
+      <ion-item lines="none" class="servicos" *ngFor="let entry of form">
+        <ion-label>{{entry.val}}</ion-label>
+        <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-item lines="none" class="ion-no-padding">
+      <ion-label position="floating">
+        Horário de Chegada <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-datetime display-format="HH:mm"></ion-datetime>
+    </ion-item>
+
+
+    <ion-item lines="none" class="ion-no-padding">
+      <ion-label position="floating">
+        Horário de Saída <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-datetime display-format="HH:mm"></ion-datetime>
+    </ion-item>
+    <hr>
+  
+  <ion-item class="total" lines="none">
+    <div slot="end">
+      <strong>Total: R$ 00,00</strong>
+    </div>
+  </ion-item>
+  </div>
+
+  <div class="ion-padding">
+    <ion-button 
+      type="submit"
+      color="dark"
+      shape="round"
+      class="ion-no-margin"
+      routerLink="/profile"
+      (click)="solicitar()"
+    >Solicitar</ion-button>
+  </div>
+</ion-content>

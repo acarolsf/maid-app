@@ -3,19 +3,30 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Editar Perfil</ion-title>
+    <ion-title>Solicitar Serviço</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
 
-  <div class="edit-profile">
+  <div class="solicitar-servico">
 
-    <div lines="none" class="img-profile">
-      <ion-avatar class="profile-image">
-        <img src="assets/profile.jpg" />
-      </ion-avatar>
+    <div class="empregado">
+      <ion-item lines="none" class="item-line ion-no-padding">
+        <div class="avatar" slot="start">
+          <ion-avatar>
+            <img src="assets/profile.jpg" />
+          </ion-avatar>
+        </div>
+        <div>
+          <div class="nome">
+            Malika Lee
+          </div>
+          <div class="funcao">
+            <p>Empregado</p>
+          </div>
+        </div>
+      </ion-item>
     </div>
 
     <div class="form-edit">
@@ -23,19 +34,9 @@
       <form>
         <ion-item lines="none" class="ion-no-padding">
           <ion-label position="floating">
-            Nome <ion-text color="danger">*</ion-text>
+            Data <ion-text color="danger">*</ion-text>
           </ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-
-        <ion-item lines="none" class="ion-no-padding">
-          <ion-label position="floating">
-            Tipo de Conta <ion-text color="danger">*</ion-text>
-          </ion-label>
-          <ion-select value="">
-            <ion-select-option value="empregador">Empregador</ion-select-option>
-            <ion-select-option value="empregado">Empregado</ion-select-option>
-          </ion-select>
+          <ion-datetime display-format="DD.MM.YYYY"></ion-datetime>
         </ion-item>
 
         <ion-item lines="none" class="ion-no-padding">
@@ -53,16 +54,22 @@
 
         <ion-item lines="none" class="ion-no-padding">
           <ion-label position="floating">
-            Email <ion-text color="danger">*</ion-text>
+            Forma de Pagamento <ion-text color="danger">*</ion-text>
           </ion-label>
-          <ion-input type="email"></ion-input>
+          <ion-select value="">
+            <ion-select-option value="dinheiro">Dinheiro</ion-select-option>
+            <ion-select-option value="credito">Cartão de Crédito</ion-select-option>
+            <ion-select-option value="debito">Cartão de Débito</ion-select-option>
+            <ion-select-option value="paypal">PayPal</ion-select-option>
+            <ion-select-option value="picpay">PicPay</ion-select-option>
+          </ion-select>
         </ion-item>
 
         <ion-item lines="none" class="ion-no-padding">
           <ion-label position="floating">
-            Telefone <ion-text color="danger">*</ion-text>
+            Descição do Serviço <ion-text color="danger">*</ion-text>
           </ion-label>
-          <ion-input type="tel"></ion-input>
+          <ion-textarea></ion-textarea>
         </ion-item>
 
         <div class="ion-padding">
@@ -71,9 +78,8 @@
             color="dark"
             shape="round"
             class="ion-no-margin"
-            (click)="salvarDados()"
-            routerLink="/profile"
-          >Salvar</ion-button>
+            routerLink="/solicitar-servico-servicos"
+          >Continuar</ion-button>
         </div>
       </form>
     </div>

@@ -37,6 +37,14 @@ const routes: Routes = [
   },  {
     path: 'editar-dados',
     loadChildren: () => import('./pages/editar-dados/editar-dados.module').then( m => m.EditarDadosPageModule)
+  },
+  {
+    path: 'solicitar-servico',
+    loadChildren: () => import('./pages/solicitar-servico/solicitar-servico.module').then( m => m.SolicitarServicoPageModule)
+  },
+  {
+    path: 'solicitar-servico-servicos',
+    loadChildren: () => import('./pages/solicitar-servico-servicos/solicitar-servico-servicos.module').then( m => m.SolicitarServicoServicosPageModule)
   }
 
 

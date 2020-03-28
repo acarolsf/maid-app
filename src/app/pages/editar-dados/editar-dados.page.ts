@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-editar-dados',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarDadosPage implements OnInit {
 
-  constructor() { }
+  constructor(private toastController: ToastController) { }
 
   ngOnInit() {
+  }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Dados salvos com sucesso!',
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  salvarDados() {
+    this.presentToast();
   }
 
 }

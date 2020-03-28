@@ -1,0 +1,44 @@
+ion-content, 
+.edit,
+.empregado {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.empregado {
+    margin-top: 20px;
+}
+
+.nome {
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.funcao {
+    opacity: .6;
+    font-size: 13px;
+}
+
+ion-item {
+    border: solid #101010;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+ion-button {
+    margin-left: 35%;
+    margin-right: 50%;
+}
+
+hr {
+    color: #101010;
+    border: solid #101010;
+    border-width: 1px;
+}
+
+.total,
+.item-line,
+.servicos {
+    border: none!important;
+}
