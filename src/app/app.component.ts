@@ -48,6 +48,11 @@ export class AppComponent implements OnInit {
       title: 'Solicitações',
       url: '/solicitacoes',
       icon: 'list'
+    },
+    {
+      title: 'Forma de Pagamento',
+      url: '/forma-pagamento',
+      icon: 'card'
     }
   ];
 

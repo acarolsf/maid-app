@@ -224,3 +224,38 @@
   }
 
 }
+
+ion-item {
+  --show-full-highlight: 0;
+  --show-inset-highlight: 0;
+}
+
+ion-searchbar {
+  margin: 0;
+  padding: 0;
+  .searchbar-input.sc-ion-searchbar-md {
+    height: 54px;
+    border-radius: 30px;
+    box-shadow: none !important;
+    border: 2px solid var(--ion-color-dark);
+    background: var(--ion-color-light);
+  }
+  ion-icon.searchbar-search-icon {
+    top: 18px;
+  }
+}
+.modal {
+  height: 28%;
+  width: 70%;
+  top: 40%;
+  left: 15%;
+  border-radius: 30px;
+  box-shadow: none !important;
+  border: 2px solid var(--ion-color-dark);
+  background: var(--ion-color-light);
+  ion-textarea {
+    text-align: left;
+    border-bottom: solid var(--ion-color-dark);
+    border-width: 1px;
+  }
+}

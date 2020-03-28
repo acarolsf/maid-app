@@ -14,10 +14,11 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AddCupomComponent } from './components/add-cupom/add-cupom.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, AddCupomComponent],
+  entryComponents: [AddCupomComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

@@ -52,7 +52,15 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/solicitacoes/solicitacoes.module').then( m => m.SolicitacoesPageModule)
+  },  {
+    path: 'forma-pagamento',
+    loadChildren: () => import('./pages/forma-pagamento/forma-pagamento.module').then( m => m.FormaPagamentoPageModule)
   },
+  {
+    path: 'adicionar-cartao',
+    loadChildren: () => import('./pages/adicionar-cartao/adicionar-cartao.module').then( m => m.AdicionarCartaoPageModule)
+  },
+
 
 ];
 

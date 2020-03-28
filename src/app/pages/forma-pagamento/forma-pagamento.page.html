@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Forma de Pagamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+  <ion-list>
+    <ion-item *ngFor="let entry of form" lines="none" routerLink={{entry.link}}>
+      <div class="icon" slot="start">
+        <ion-icon name={{entry.icon}}></ion-icon>
+      </div>
+      
+      <div class="nome">
+        {{entry.val}}
+      </div>
+
+      <div slot="end" *ngIf="entry.val !== 'Dinheiro'">
+        <ion-icon name="add"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <div class="link" (click)="cupom($event)">
+    Adicionar cupom promocional
+  </div>
+  </div>
+</ion-content>
