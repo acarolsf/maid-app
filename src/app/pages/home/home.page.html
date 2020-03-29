@@ -33,7 +33,7 @@
   <h2>Classificação</h2>
 
   <ion-list *ngFor="let ppl of ranking; index as i">
-    <ion-item>
+    <ion-item (click)="openModal(ppl, $event)">
       <div class="number" slot="start">{{i + 1}}</div>
       <div>
         <ion-avatar>

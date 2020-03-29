@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController, ToastController } from '@ionic/angular';
+import { MenuController, ToastController, ModalController } from '@ionic/angular';
+import { ProfileComponent } from 'src/app/components/profile/profile.component';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,7 @@ export class HomePage implements OnInit {
   ranking: Array<{nome: string, rating: string, cidade: string, link: string}>;
   menuContent: string;
 
-  constructor(private menuController: MenuController) {
+  constructor(private menuController: MenuController, private modalController: ModalController) {
     this.initializeItems();
   }
 
@@ -114,6 +115,20 @@ export class HomePage implements OnInit {
     // this.menuController.open('empregadorMenu');
   }
 
+  async openModal(ppl, event) {
+    const modal = await this.modalController.create({
+      component: ProfileComponent,
+      cssClass: 'modal-page',
+      componentProps: {
+        key: ppl.key,
+        nome: ppl.nome,
+        cidade: ppl.cidade,
+        email: 'acarolsf@gmail.com',
+        telefone: '999999999'
+      },
+    });
+    return await modal.present();
+  }
   onSearchChange(event) {
   }
 }

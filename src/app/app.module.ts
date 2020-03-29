@@ -18,18 +18,21 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AddCupomComponent } from './components/add-cupom/add-cupom.component';
 import { ExibicaoComponent } from './components/exibicao/exibicao.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCupomComponent,
     ExibicaoComponent,
-    NotificacoesComponent
+    NotificacoesComponent,
+    ProfileComponent,
   ],
   entryComponents: [
     AddCupomComponent,
     ExibicaoComponent,
     NotificacoesComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

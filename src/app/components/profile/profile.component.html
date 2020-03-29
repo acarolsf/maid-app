@@ -1,3 +1,49 @@
-<p>
-  profile works!
-</p>
+<div class="component">
+  
+  <ion-item lines="none">
+  <div>
+    <ion-avatar>
+      <img src="assets/profile.jpg" />
+    </ion-avatar>
+  </div>
+  <div>
+    <div class="nome">
+      {{ nome }}
+    </div>
+    <div class="cidade">
+      {{ cidade }}
+    </div>
+  </div>
+  </ion-item>
+
+  <div class="contact">
+    <div class="email">
+      <strong>Email:</strong>
+      {{ email }}
+    </div>
+    <div class="telefone">
+      <strong>Telefone:</strong>
+      {{ telefone }}
+    </div>
+  </div>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col class="buttons" size="2" (click)="profile()">
+        <ion-icon name="person"></ion-icon>
+      </ion-col>
+      <ion-col class="buttons" size="2">
+        |
+      </ion-col>
+      <ion-col class="buttons" size="2" (click)="call()">
+        <ion-icon name="call"></ion-icon>
+      </ion-col>
+      <ion-col class="buttons" size="2">
+        |
+      </ion-col>
+      <ion-col class="buttons" size="2" (click)="sendEmail()">
+        <ion-icon name="mail"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
