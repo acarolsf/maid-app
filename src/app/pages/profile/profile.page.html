@@ -13,28 +13,48 @@
         <img src="assets/profile.jpg" />
       </ion-avatar>
       <div>
-      <div class="name">
-        <h1>Malika Lee</h1>
+        <div class="name">
+          <h1>Malika Lee</h1>
+        </div>
+        <div class="function">
+          <ion-label>Babysitter, Seattle</ion-label>
+        </div>
       </div>
-      <div class="function">
-        <ion-label>Babysitter, Seattle</ion-label>
-      </div>
-    </div>
     </ion-item>
   </div>
 
-  <div class="button">
-    <ion-button 
-      shape="round" 
-      color="dark" 
+  <div class="button" *ngIf="profileType !== 'not-user'">
+    <ion-button
+      shape="round"
+      color="dark"
       fill="outline"
       routerLink="/editar-dados"
     >
       Editar Perfil
     </ion-button>
-    <ion-button 
-      shape="round" 
-      color="dark" 
+  </div>
+  <div class="button" *ngIf="profileType == 'not-user'">
+  
+    <div class="btnContact">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button shape="round" expand="block" color="dark" fill="outline">
+              Telefone
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button shape="round" expand="block" color="dark" fill="outline">
+              Email
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <ion-button
+      shape="round"
+      color="dark"
       fill="outline"
       routerLink="/solicitar-servico"
     >
@@ -56,13 +76,15 @@
       <ion-item class="filtro" lines="none">
         <ion-select value="mr">
           <ion-select-option value="mr">Mais relevantes</ion-select-option>
-          <ion-select-option value="rating">Por classificação</ion-select-option>
+          <ion-select-option value="rating"
+            >Por classificação</ion-select-option
+          >
         </ion-select>
       </ion-item>
     </ion-col>
   </ion-row>
-   
-  <ion-list *ngFor='let comment of comments'>
+
+  <ion-list *ngFor="let comment of comments">
     <ion-item lines="none">
       <ion-card class="card">
         <ion-item lines="none">
@@ -70,16 +92,16 @@
             <img src="assets/profile.jpg" />
           </ion-avatar>
           <div>
-          <div class="name">
-            <h5>{{comment.nome}}</h5>
+            <div class="name">
+              <h5>{{comment.nome}}</h5>
+            </div>
+            <div class="function">
+              <ion-label>{{comment.cidade}}</ion-label>
+            </div>
           </div>
-          <div class="function">
-            <ion-label>{{comment.cidade}}</ion-label>
-          </div>
-        </div>
         </ion-item>
         <ion-item slot="end" lines="none">
-          <rating rating=4></rating>
+          <rating rating="4"></rating>
         </ion-item>
         <div class="comentario">
           <p>{{comment.comentario}}</p>
@@ -87,6 +109,4 @@
       </ion-card>
     </ion-item>
   </ion-list>
-
-
 </ion-content>
