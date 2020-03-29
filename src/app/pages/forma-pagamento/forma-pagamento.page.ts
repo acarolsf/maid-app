@@ -26,7 +26,7 @@ export class FormaPagamentoPage implements OnInit {
   async cupom(event) {
     const modal = await this.modalController.create({
       component: AddCupomComponent,
-      cssClass: 'modal'
+      cssClass: 'modal-page'
     });
     return await modal.present();
   }

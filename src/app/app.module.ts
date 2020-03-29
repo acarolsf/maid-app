@@ -10,15 +10,27 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { environment } from '../environments/environment';
- 
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import { AddCupomComponent } from './components/add-cupom/add-cupom.component';
+import { ExibicaoComponent } from './components/exibicao/exibicao.component';
+import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 
 @NgModule({
-  declarations: [AppComponent, AddCupomComponent],
-  entryComponents: [AddCupomComponent],
+  declarations: [
+    AppComponent,
+    AddCupomComponent,
+    ExibicaoComponent,
+    NotificacoesComponent
+  ],
+  entryComponents: [
+    AddCupomComponent,
+    ExibicaoComponent,
+    NotificacoesComponent,
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

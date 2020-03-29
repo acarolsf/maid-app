@@ -60,6 +60,10 @@ const routes: Routes = [
     path: 'adicionar-cartao',
     loadChildren: () => import('./pages/adicionar-cartao/adicionar-cartao.module').then( m => m.AdicionarCartaoPageModule)
   },
+  {
+    path: 'configuracoes',
+    loadChildren: () => import('./pages/configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
+  },
 
 
 ];

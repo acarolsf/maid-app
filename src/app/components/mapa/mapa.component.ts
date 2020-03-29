@@ -25,7 +25,8 @@ export class MapaComponent {
   locationsCollection: AngularFirestoreCollection<any>;
 
   // Map related
-  @ViewChild('map', true) mapElement: ElementRef;
+  // @ViewChild('map')
+  mapElement: ElementRef;
   map: any;
   markers = [];
 
@@ -140,6 +141,5 @@ updateMap(locations) {
   }
 }
 
-  
 
 }

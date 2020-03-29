@@ -244,18 +244,18 @@ ion-searchbar {
     top: 18px;
   }
 }
-.modal {
-  height: 28%;
-  width: 70%;
-  top: 40%;
-  left: 15%;
-  border-radius: 30px;
-  box-shadow: none !important;
-  border: 2px solid var(--ion-color-dark);
-  background: var(--ion-color-light);
+
+
+.modal-page .modal-wrapper {
+  width: 80%;
+  height: 30%; 
+  border-radius: 5%;
+  border-width: 3px;
+  border-color: var(--ion-color-dark);
   ion-textarea {
     text-align: left;
     border-bottom: solid var(--ion-color-dark);
     border-width: 1px;
   }
 }
+
