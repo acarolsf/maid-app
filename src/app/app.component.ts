@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Solicitações',
       url: '/solicitacoes',
-      icon: 'list'
+      icon: 'albums'
     },
     {
       title: 'Forma de Pagamento',
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
       title: 'Configurações',
       url: '/configuracoes',
       icon: 'settings'
-    }
+    },
   ];
 
   constructor(

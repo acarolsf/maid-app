@@ -19,6 +19,7 @@ import { AddCupomComponent } from './components/add-cupom/add-cupom.component';
 import { ExibicaoComponent } from './components/exibicao/exibicao.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DesbloquearComponent } from './components/desbloquear/desbloquear.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,14 @@ import { ProfileComponent } from './components/profile/profile.component';
     ExibicaoComponent,
     NotificacoesComponent,
     ProfileComponent,
+    DesbloquearComponent,
   ],
   entryComponents: [
     AddCupomComponent,
     ExibicaoComponent,
     NotificacoesComponent,
     ProfileComponent,
+    DesbloquearComponent,
   ],
   imports: [
     BrowserModule,

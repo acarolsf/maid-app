@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contas Bloqueadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let ppl of people">
+    <ion-item>
+      
+      <div>
+        <ion-avatar>
+          <img src="assets/profile.jpg" />
+        </ion-avatar>
+      </div>
+      <div>
+        <div class="nome">
+          {{ppl.nome}}
+        </div>
+        <div class="funcao">
+          {{ppl.funcao}}, {{ppl.cidade}}
+        </div>
+      </div>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

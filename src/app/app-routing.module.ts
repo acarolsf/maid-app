@@ -75,7 +75,15 @@ const routes: Routes = [
       special: DataResolverService
     },
     loadChildren: () => import('./pages/finalizar-servico/finalizar-servico.module').then( m => m.FinalizarServicoPageModule)
+  },  {
+    path: 'privacidade',
+    loadChildren: () => import('./pages/privacidade/privacidade.module').then( m => m.PrivacidadePageModule)
   },
+  {
+    path: 'contas-bloqueadas',
+    loadChildren: () => import('./pages/contas-bloqueadas/contas-bloqueadas.module').then( m => m.ContasBloqueadasPageModule)
+  },
+
 
 
 

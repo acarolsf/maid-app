@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { NotificacoesComponent } from 'src/app/components/notificacoes/notificacoes.component';
 import { ExibicaoComponent } from 'src/app/components/exibicao/exibicao.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-configuracoes',
@@ -16,7 +17,7 @@ export class ConfiguracoesPage implements OnInit {
     { title: 'Modo de Exibição', val: 'Claro', link: 'exibition' }
   ];
 
-  constructor(private modalController: ModalController) { }
+  constructor(private modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
   }
@@ -44,6 +45,7 @@ export class ConfiguracoesPage implements OnInit {
   open(opt, ev) {
     switch (opt.link) {
       case 'privacy':
+        this.router.navigateByUrl('/privacidade');
         console.log('privacidade');
         break;
       case 'notifications':
