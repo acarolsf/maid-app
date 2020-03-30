@@ -9,7 +9,7 @@
 
 <ion-content>
 
-  <ion-list *ngFor="let ppl of people">
+  <ion-list *ngFor="let ppl of people" (click)="openModal(ppl)">
     <ion-item>
       
       <div>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController, NavParams } from '@ionic/angular';
 
 @Component({
   selector: 'app-desbloquear',
@@ -8,7 +8,12 @@ import { ModalController } from '@ionic/angular';
 })
 export class DesbloquearComponent implements OnInit {
 
-  constructor(private modalController: ModalController) { }
+  @Input() nome: string;
+
+  exibir: string;
+  constructor(private modalController: ModalController, navParams: NavParams) {
+    this.exibir = navParams.get('nome');
+   }
 
   ngOnInit() {}
 
