@@ -1,0 +1,57 @@
+<ion-content>
+  <div class="image-logo">
+    <img src="assets/maid-logo.png" alt="Logo do App é a letra M" />
+  </div>
+
+  <div class="blackBackground">
+    <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
+    <form class="form">
+      <ion-item class="input-form">
+        <ion-label position="floating">
+          Nome <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <!-- <ion-input required formControlName="email" type="text"></ion-input> -->
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="input-form">
+        <ion-label position="floating">
+          Tipo de Conta <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-select value="">
+          <ion-select-option value="empregador">Empregador</ion-select-option>
+          <ion-select-option value="empregado">Empregado</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="input-form">
+        <ion-label position="floating">
+          Cidade <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <!-- <ion-input required formControlName="email" type="text"></ion-input> -->
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="input-form">
+        <ion-label position="floating">
+          Email <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <!-- <ion-input required formControlName="email" type="text"></ion-input> -->
+        <ion-input required type="email"></ion-input>
+      </ion-item>
+
+      <ion-item class="input-form">
+        <ion-label position="floating">Password <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <!-- <ion-input required formControlName="password" type="text"></ion-input> -->
+        <ion-input required type="password"></ion-input>
+      </ion-item>
+      <ion-button block color="primary" type="submit" fill="white" shape="round" (click)="openNext()">
+        <!--[disabled]="loginForm.invalid">-->
+        Cadastrar
+      </ion-button>
+    </form>
+  
+
+  </div>
+</ion-content>

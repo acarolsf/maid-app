@@ -10,7 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectedIndex = 0;
+  // public selectedIndex = 0;
   public maidPages = [
     {
       title: 'Página Inicial',
@@ -59,6 +59,11 @@ export class AppComponent implements OnInit {
       url: '/configuracoes',
       icon: 'settings'
     },
+    {
+      title: 'Sair',
+      url: '/login',
+      icon: 'logout'
+    }
   ];
 
   constructor(
@@ -78,8 +83,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     const path = window.location.pathname.split('pages/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.maidPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
+    // if (path !== undefined) {
+    //   this.selectedIndex = this.maidPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    // }
   }
 }

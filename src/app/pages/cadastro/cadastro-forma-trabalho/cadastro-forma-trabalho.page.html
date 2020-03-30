@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="image-logo">
+    <img src="assets/maid-logo.png" alt="Logo do App é a letra M" />
+  </div>
+
+  <div class="blackBackground">
+    <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
+    <form class="form">
+  
+      <ion-item lines="none" class="input-form">
+        <ion-label position="floating">
+          Forma de trabalho <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-select value="">
+          <ion-select-option value="diaria">Diária</ion-select-option>
+          <ion-select-option value="hora">Hora</ion-select-option>
+          <ion-select-option value="mes">Mês</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="input-form">
+        <ion-label position="floating">
+          Valor <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <!-- <ion-input required formControlName="email" type="text"></ion-input> -->
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      
+
+      <ion-button block color="primary" type="submit" fill="white" shape="round" routerLink="/cadastro-servicos">
+        <!--[disabled]="loginForm.invalid">-->
+        Próximo
+      </ion-button>
+    </form>
+  
+
+  </div>
+</ion-content>
