@@ -105,16 +105,15 @@ export class AceitasPage implements OnInit {
     this.router.navigateByUrl('/servico-detail/' + id);
   }
 
-  async toastFinalizado() {
-    const toast = await this.toastController.create({
-      message: 'Serviço Finalizado!',
-      duration: 2000
-    });
-    toast.present();
+  finalizar(item, id) {
+    const key = this.randomKey();
+    this.dataService.setData(id, item);
+    this.router.navigateByUrl('/finalizar-servico/' + id);
   }
 
-  finalizar() {
-    this.toastFinalizado();
+  randomKey() {
+    const r = Math.random().toString(36).substring(7);
+    return r;
   }
 
 }

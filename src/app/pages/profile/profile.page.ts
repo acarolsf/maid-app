@@ -10,7 +10,7 @@ export class ProfilePage implements OnInit {
   comments: Array<{nome: string, cidade: string, rating: string, comentario: string}>;
   profileType: any;
   constructor() {
-    this.profileType = 'not-user';
+    this.profileType = 'user';
     this.comments = [];
     this.comments.push({
       nome: 'Cleide',

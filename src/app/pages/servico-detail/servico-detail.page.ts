@@ -1,17 +1,7 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection
-} from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-import { Plugins } from '@capacitor/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-const { Geolocation } = Plugins;
+import { DataService } from 'src/app/services/data.service';
 
-declare var google;
 
 @Component({
   selector: 'app-servico-detail',
@@ -20,12 +10,27 @@ declare var google;
 })
 export class ServicoDetailPage implements OnInit {
   data: any;
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private dataService: DataService
+  ) {}
 
   ngOnInit() {
     if (this.route.snapshot.data.special) {
       this.data = this.route.snapshot.data.special;
     }
+  }
+
+  finalizar() {
+    const key = this.randomKey();
+    this.dataService.setData(key, this.data);
+    this.router.navigateByUrl('/finalizar-servico/' + this.randomKey());
+  }
+
+  randomKey() {
+    const r = Math.floor(Math.random() * 10) + 1;
+    return r;
   }
 
 }

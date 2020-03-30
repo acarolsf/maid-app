@@ -64,8 +64,16 @@ const routes: Routes = [
   {
     path: 'configuracoes',
     loadChildren: () => import('./pages/configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
-  },  {
+  },
+  {
     path: 'finalizar-servico',
+    loadChildren: () => import('./pages/finalizar-servico/finalizar-servico.module').then( m => m.FinalizarServicoPageModule)
+  },
+  {
+    path: 'finalizar-servico/:id',
+    resolve: {
+      special: DataResolverService
+    },
     loadChildren: () => import('./pages/finalizar-servico/finalizar-servico.module').then( m => m.FinalizarServicoPageModule)
   },
 

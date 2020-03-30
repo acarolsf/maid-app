@@ -1,0 +1,30 @@
+.stars {
+    size: 100%;
+    margin: 40px;
+}
+
+.content {
+    margin: 10%;
+}
+
+textarea {
+    border: solid var(--ion-color-dark);
+    border-width: 1px;
+    width: 100%;
+}
+
+.classificar, .comentario {
+    margin-top: 10%;
+}
+
+.funcao {
+    opacity: .7;
+    font-size: 12px;
+    margin-top: -15px;
+}
+
+.botao {
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 50%;
+}

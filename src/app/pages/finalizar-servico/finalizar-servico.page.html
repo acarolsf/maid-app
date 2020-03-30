@@ -1,0 +1,61 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Finalizar Serviço</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+    <ion-item lines="none">
+      <div class="avatar" slot="start">
+        <ion-avatar>
+          <img src="assets/profile.jpg" />
+        </ion-avatar>
+      </div>
+      <div>
+        <div class="nome">
+          <h3>{{data.empregado}}</h3>
+        </div>
+        <div class="funcao">
+          <p>Babá, Seattle</p>
+        </div>
+      </div>
+    </ion-item>
+
+
+    <div class="classificar">
+      
+      <h2>Classificar</h2>
+      <rating class="stars" rating=5></rating>
+
+    </div>
+
+    <div class="comentario">
+
+      <h2>Deixar comentário</h2>
+      <textarea></textarea>
+
+    </div>
+
+    <div class="botao">
+
+      <ion-button 
+        (click)="finalizar()"
+        routerLink="/solicitacoes/aceitas"
+        routerDirection="back" 
+        color="dark"
+        shape="round">
+        Finalizar
+      </ion-button>
+    </div>
+
+
+  </div>
+
+
+  
+</ion-content>
