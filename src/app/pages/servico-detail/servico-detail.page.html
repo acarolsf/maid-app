@@ -76,4 +76,10 @@
       <app-mapa></app-mapa>
     </div>
   </div>
+
+  <div class="botao" *ngIf="data.status == 'não finalizado'">
+    <ion-button (click)="finalizar()" expand="block" color="dark" shape="round">
+      Finalizar
+    </ion-button>
+  </div>
 </ion-content>

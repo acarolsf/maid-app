@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EmAbertoPageRoutingModule } from './em-aberto-routing.module';
+import { FinalizadasPageRoutingModule } from './finalizadas-routing.module';
 
-import { EmAbertoPage } from './em-aberto.page';
+import { FinalizadasPage } from './finalizadas.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EmAbertoPageRoutingModule
+    FinalizadasPageRoutingModule
   ],
-  declarations: [EmAbertoPage]
+  declarations: [FinalizadasPage]
 })
-export class EmAbertoPageModule {}
+export class FinalizadasPageModule {}

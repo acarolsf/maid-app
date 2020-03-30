@@ -4,11 +4,11 @@ import { DataService } from 'src/app/services/data.service';
 import { ToastController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-aceitas',
-  templateUrl: './aceitas.page.html',
-  styleUrls: ['./aceitas.page.scss'],
+  selector: 'app-pendentes',
+  templateUrl: './pendentes.page.html',
+  styleUrls: ['./pendentes.page.scss'],
 })
-export class AceitasPage implements OnInit {
+export class PendentesPage implements OnInit {
 
   items: Array<{
     data: string,
@@ -18,8 +18,7 @@ export class AceitasPage implements OnInit {
     formaDePagamento: string,
     quantia: string,
     local: string,
-    horario: string,
-    status: string,
+    horario: string
   }>;
 
   constructor(
@@ -36,8 +35,7 @@ export class AceitasPage implements OnInit {
       formaDePagamento: 'Dinheiro',
       quantia: '100,00',
       local: 'Martin Luter King Jr S W',
-      horario: '14h',
-      status: 'não finalizado'
+      horario: '14h'
     });
     this.items.push({
       data: '20/02/2020',
@@ -47,8 +45,7 @@ export class AceitasPage implements OnInit {
       formaDePagamento: 'Crédito',
       quantia: '100,00',
       local: 'Martin Luter King Jr S W',
-      horario: '14h',
-      status: 'não finalizado'
+      horario: '14h'
     });
     this.items.push({
       data: '20/02/2020',
@@ -58,8 +55,7 @@ export class AceitasPage implements OnInit {
       formaDePagamento: 'Débito',
       quantia: '100,00',
       local: 'Martin Luter King Jr S W',
-      horario: '14h',
-      status: 'não finalizado'
+      horario: '14h'
     });
     this.items.push({
       data: '20/02/2020',
@@ -69,8 +65,7 @@ export class AceitasPage implements OnInit {
       formaDePagamento: 'Paypal',
       quantia: '100,00',
       local: 'Martin Luter King Jr S W',
-      horario: '14h',
-      status: 'não finalizado'
+      horario: '14h'
     });
     this.items.push({
       data: '20/02/2020',
@@ -80,8 +75,7 @@ export class AceitasPage implements OnInit {
       formaDePagamento: 'PicPay',
       quantia: '100,00',
       local: 'Martin Luter King Jr S W',
-      horario: '14h',
-      status: 'não finalizado'
+      horario: '14h'
     });
     this.items.push({
       data: '20/02/2020',
@@ -91,8 +85,7 @@ export class AceitasPage implements OnInit {
       formaDePagamento: 'Dinheiro',
       quantia: '100,00',
       local: 'Martin Luter King Jr S W',
-      horario: '14h',
-      status: 'não finalizado'
+      horario: '14h'
     });
   }
 
@@ -105,16 +98,26 @@ export class AceitasPage implements OnInit {
     this.router.navigateByUrl('/servico-detail/' + id);
   }
 
-  async toastFinalizado() {
+  async toastAccept() {
     const toast = await this.toastController.create({
-      message: 'Serviço Finalizado!',
+      message: 'Serviço aceito!',
       duration: 2000
     });
     toast.present();
   }
 
-  finalizar() {
-    this.toastFinalizado();
+  async toastRecusado() {
+    const toast = await this.toastController.create({
+      message: 'Serviço recusado!',
+      duration: 2000
+    });
+    toast.present();
+  }
+  accept() {
+    this.toastAccept();
+  }
+  recused() {
+    this.toastRecusado();
   }
 
 }

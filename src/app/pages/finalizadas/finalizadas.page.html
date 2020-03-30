@@ -2,14 +2,14 @@
   <ion-list *ngFor="let item of items index as i">
 
     <ion-item lines="none">
-      <ion-card class="card">
-        <ion-grid (click)="openDetail(item, i)">
+      <ion-card class="card" (click)="openDetail(item, i)">
+        <ion-grid>
           <ion-row>
             <ion-col size="6">
               <strong class="data">{{item.data}}</strong>
             </ion-col>
             <ion-col size="6" class="ion-text-end left-side" text-left>
-              <ion-text class="pagamento">{{item.formaDePagamento}}</ion-text>
+              <ion-text class="pagamento">{{item.formaDePagamento}}</ion-text> R$ {{item.quantia}}
             </ion-col>
 
             <ion-col size="12">
@@ -30,10 +30,6 @@
             
           </ion-row>
         </ion-grid>
-
-        <ion-button (click)="finalizar()" expand="block" color="dark" shape="round">
-          Finalizar
-        </ion-button>
       </ion-card>
     </ion-item>
 

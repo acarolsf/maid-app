@@ -52,7 +52,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/solicitacoes/solicitacoes.module').then( m => m.SolicitacoesPageModule)
-  },  {
+  },
+  {
     path: 'forma-pagamento',
     loadChildren: () => import('./pages/forma-pagamento/forma-pagamento.module').then( m => m.FormaPagamentoPageModule)
   },
@@ -63,7 +64,11 @@ const routes: Routes = [
   {
     path: 'configuracoes',
     loadChildren: () => import('./pages/configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
+  },  {
+    path: 'finalizar-servico',
+    loadChildren: () => import('./pages/finalizar-servico/finalizar-servico.module').then( m => m.FinalizarServicoPageModule)
   },
+
 
 
 ];

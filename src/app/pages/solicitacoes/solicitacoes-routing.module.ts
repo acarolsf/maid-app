@@ -9,16 +9,6 @@ const routes: Routes = [
     component: SolicitacoesPage,
     children: [
       {
-        path: 'em-aberto',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../em-aberto/em-aberto.module').then(m => m.EmAbertoPageModule)
-          }
-        ]
-      },
-      {
         path: 'aceitas',
         children: [
           {
@@ -29,15 +19,35 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'finalizadas',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../finalizadas/finalizadas.module').then( m => m.FinalizadasPageModule)
+          }
+        ]
+      },
+      {
+        path: 'pendentes',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+            import('../pendentes/pendentes.module').then( m => m.PendentesPageModule)
+          }
+        ]
+      },
+      {
         path: '',
-        redirectTo: '/solicitacoes/em-aberto',
+        redirectTo: '/solicitacoes/pendentes',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/solicitacoes/em-aberto',
+    redirectTo: '/solicitacoes/pendentes',
     pathMatch: 'full'
   }
 ];
