@@ -32,6 +32,7 @@ export class FinalizarServicoPage implements OnInit {
     });
     toast.present();
   }
+
   finalizar() {
     this.toastFinalizado();
   }
