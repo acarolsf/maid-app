@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController, ToastController, ModalController } from '@ionic/angular';
 import { ProfileComponent } from 'src/app/components/profile/profile.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Plugins } from '@capacitor/core';
 
 @Component({
   selector: 'app-home',
@@ -24,8 +26,39 @@ export class HomePage implements OnInit {
   ranking: Array<{nome: string, rating: string, cidade: string, link: string}>;
   menuContent: string;
 
-  constructor(private menuController: MenuController, private modalController: ModalController) {
+  logininfo: any;
+  user: any;
+
+  constructor(
+    private menuController: MenuController,
+    private modalController: ModalController,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+    this.route.queryParams.subscribe(params => {
+      if (params && params.userinfo) {
+        this.logininfo = JSON.parse(params.userinfo);
+      }
+    });
     this.initializeItems();
+  }
+
+  ionViewWillEnter() {
+    this.getUserInfo();
+  }
+
+  async signOut(): Promise<void> {
+    await Plugins.FacebookLogin.logout();
+    this.router.navigate(['/login']);
+  }
+
+  async getUserInfo() {
+    const response =
+      await fetch(
+        `https://graph.facebook.com/${this.logininfo.userId}?fields=id,name,gender,link,picture&type=large&access_token=${this.logininfo.token}`
+      );
+    const myJson = await response.json();
+    this.user = myJson;
   }
 
   initializeItems() {

@@ -4,24 +4,39 @@
   </div>
 
   <div class="blackBackground">
-    <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
-    <form class="form">
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <ion-item class="input-form">
         <ion-label position="floating">
           E-Mail <ion-text color="danger">*</ion-text>
         </ion-label>
-        <!-- <ion-input required formControlName="email" type="text"></ion-input> -->
-        <ion-input required type="text"></ion-input>
+        <ion-input required type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!loginForm.controls.email.valid && (loginForm.controls.email.dirty || loginForm.controls.email.touched)" color="danger">
+        <div [hidden]="!loginForm.controls.email.errors.required">
+          O campo é obrigatório
+        </div>
+        <div [hidden]="!loginForm.controls.email.errors.pattern">
+          O email inserido é inválido
+        </div>
       </ion-item>
       <ion-item class="input-form">
         <ion-label position="floating">Password <ion-text color="danger">*</ion-text>
         </ion-label>
-        <!-- <ion-input required formControlName="password" type="text"></ion-input> -->
-        <ion-input required type="password"></ion-input>
+        <ion-input required type="password" formControlName="senha"></ion-input>
       </ion-item>
-      <ion-button block color="primary" type="submit" fill="white" shape="round" routerLink="/home"
+      <ion-item *ngIf="!loginForm.controls.senha.valid && (loginForm.controls.senha.dirty || loginForm.controls.senha.touched)" color="danger">
+        <div [hidden]="!loginForm.controls.senha.errors.required">
+          O campo é obrigatório
+        </div>
+  
+        <div *ngIf="!loginForm.controls.senha.errors.minLength">
+          Senha deve conter, no mínimo, 6 caracteres.
+        </div>
+  
+      </ion-item>
+
+      <ion-button block color="primary" [disabled]="!loginForm.valid" type="submit" fill="white" shape="round" routerLink="/home"
         routerDirection="root">
-        <!--[disabled]="loginForm.invalid">-->
         Login
       </ion-button>
     </form>
@@ -37,6 +52,13 @@
         Cadastre-se
       </ion-text>
     </div>
-
+    <div
+      class="fb-login-button"
+      data-max-rows="1"
+      data-size="small"
+      data-width="50%"
+      data-button-type="continue_with"
+      data-use-continue-as="true"
+    ></div>
   </div>
 </ion-content>
