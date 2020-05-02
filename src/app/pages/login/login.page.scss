@@ -13,7 +13,6 @@
     color: white;
     height: 35px;
     text-align: center;
-    width: 50%;
 }
 .blackBackground {
     height: 100%;
@@ -42,3 +41,41 @@
 .cadastre {
     margin-top: 10px;
 }
+
+#g-login-button {
+    margin-top: 20px;
+}
+
+#customButton {
+    background: white;
+    color: #444;
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+  }
+  #customBtn:hover {
+    cursor: pointer;
+  }
+  span.label {
+    font-family: serif;
+    font-weight: normal;
+    color: white;
+  }
+  span.icon {
+    // background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    margin-top: 7%;
+    vertical-align: middle;
+    color: red;
+    width: 42px;
+    height: 42px;
+  }
+  span.btnText {
+    // display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    color: red;
+    margin-top: -3%;
+    font-weight: bold;
+  }

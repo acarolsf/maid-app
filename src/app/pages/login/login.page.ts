@@ -13,8 +13,6 @@ import { Plugins } from '@capacitor/core';
 export class LoginPage implements OnInit {
 
   loginForm: FormGroup;
-  email: string;
-  senha: string;
 
   constructor(
     private menuController: MenuController,
@@ -22,9 +20,9 @@ export class LoginPage implements OnInit {
     private router: Router
   ) {
     this.loginForm = this.formBuilder.group({
-      email: [this.email, Validators.compose([
+      email: ['', Validators.compose([
         Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])],
-       senha: [this.senha, Validators.compose([
+       senha: ['', Validators.compose([
          Validators.required, Validators.minLength(6)])]
     });
    }
@@ -38,7 +36,7 @@ export class LoginPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.getCurrentState();
+    // this.getCurrentState();
   }
   async getCurrentState() {
     const result = await Plugins.FacebookLogin.getCurrentAccessToken();

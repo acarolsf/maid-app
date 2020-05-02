@@ -44,7 +44,7 @@ export class HomePage implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.getUserInfo();
+    // this.getUserInfo();
   }
 
   async signOut(): Promise<void> {

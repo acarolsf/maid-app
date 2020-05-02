@@ -3,7 +3,11 @@
     width: 80px;
     height: 80px;
     margin: auto;
-    margin-top: 20%;
+    // margin-top: 20%;
+}
+ion-toolbar {
+    --background: transparent !important; 
+    --ion-color-base: transparent !important;
 }
 .blackBackground {
     height: 100%;

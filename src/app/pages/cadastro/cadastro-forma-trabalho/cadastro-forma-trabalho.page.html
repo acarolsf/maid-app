@@ -1,3 +1,11 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <div class="image-logo">
     <img src="assets/maid-logo.png" alt="Logo do App é a letra M" />
@@ -5,17 +13,22 @@
 
   <div class="blackBackground">
     <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
-    <form class="form">
+    <form class="form" [formGroup]="cadForm" (ngSubmit)="next()">
   
       <ion-item lines="none" class="input-form">
         <ion-label position="floating">
           Forma de trabalho <ion-text color="danger">*</ion-text>
         </ion-label>
-        <ion-select value="">
+        <ion-select value="" formControlName="formaTrab" required>
           <ion-select-option value="diaria">Diária</ion-select-option>
           <ion-select-option value="hora">Hora</ion-select-option>
           <ion-select-option value="mes">Mês</ion-select-option>
         </ion-select>
+      </ion-item>
+      <ion-item *ngIf="!cadForm.controls.formaTrab.valid && (cadForm.controls.formaTrab.dirty || cadForm.controls.formaTrab.touched)" color="danger">
+        <div [hidden]="!cadForm.controls.formaTrab.errors.required">
+          O campo é obrigatório
+        </div>
       </ion-item>
 
       <ion-item class="input-form">
@@ -23,12 +36,23 @@
           Valor <ion-text color="danger">*</ion-text>
         </ion-label>
         <!-- <ion-input required formControlName="email" type="text"></ion-input> -->
-        <ion-input required type="text"></ion-input>
+        <ion-input required type="number" formControlName="preco"></ion-input>
       </ion-item>
-
+      <ion-item *ngIf="!cadForm.controls.preco.valid && (cadForm.controls.preco.dirty || cadForm.controls.preco.touched)" color="danger">
+        <div [hidden]="!cadForm.controls.preco.errors.required">
+          O campo é obrigatório
+        </div>
+      </ion-item>
       
 
-      <ion-button block color="primary" type="submit" fill="white" shape="round" routerLink="/cadastro-servicos">
+      <ion-button 
+        block 
+        color="primary" 
+        type="submit" 
+        fill="white"
+        shape="round" 
+        [disabled]="!cadForm.valid"
+        routerLink="/cadastro-servicos">
         <!--[disabled]="loginForm.invalid">-->
         Próximo
       </ion-button>

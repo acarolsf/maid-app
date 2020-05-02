@@ -3,7 +3,11 @@
     width: 80px;
     height: 80px;
     margin: auto;
-    margin-top: 20%;
+    // margin-top: 20%;
+}
+ion-toolbar {
+    --background: transparent !important; 
+    --ion-color-base: transparent !important;
 }
 .blackBackground {
     height: 100%;
@@ -24,9 +28,21 @@ h3 {
     color: var(--ion-color-light);
     text-align: left;
     margin-left: 20px;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .botaoAdd {
     margin-left: 50%;
+}
+.botaoFim {
+    margin: 15px;
+    
+}
+.lista {
+    background-color: white;
+    height: 150px;
+    width: 90%;
+    margin: 15px;
+    border-radius: 15px;
+    overflow-y: scroll;
 }

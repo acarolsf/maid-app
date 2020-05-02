@@ -1,3 +1,11 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <div class="image-logo">
     <img src="assets/maid-logo.png" alt="Logo do App é a letra M" />
@@ -5,20 +13,48 @@
 
   <div class="blackBackground">
     <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
-    <form class="form">
+    <form class="form" [formGroup]="servicesForm" (ngSubmit)="addItem()">
       <h3>Digite seus principais serviços a serem prestados</h3>
       <ion-item class="input-form">
         <!-- <ion-input required formControlName="email" type="text"></ion-input> -->
-        <ion-input required type="text"></ion-input>
+        <ion-input required type="text" formControlName="nome"></ion-input>
       </ion-item>
 
-      
-      <ion-button class="botaoAdd" color="primary" type="submit" fill="white" shape="round" routerLink="/login">
+      <ion-button 
+        class="botaoAdd" 
+        color="primary" 
+        type="submit"
+        [disabled]="!servicesForm.valid" 
+        fill="white" 
+        shape="round">
         <!--[disabled]="loginForm.invalid">-->
         Adicionar
       </ion-button>
     </form>
-  
+    
+    <div class="lista">
+      <ion-list>
+        <ion-item *ngFor="let s of servicos; let i = index">
+          <span class="nome">{{s.servico.nome}}</span>
+          <span class="icon" slot="end">
+            <ion-icon name="trash" color="danger" 
+              (click)="remove(i, $event)"></ion-icon>
+          </span>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <ion-button 
+      class="botaoFim"
+      (click)="finalizar()"
+      expand="block"
+      [disabled]="!servicos.length"
+      fill="white"
+      routerLink="/login"
+      routerDirection="back"
+      shape="round">
+      Finalizar
+    </ion-button>
 
   </div>
 </ion-content>

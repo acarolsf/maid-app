@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-forma-trabalho',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroFormaTrabalhoPage implements OnInit {
 
-  constructor() { }
+  cadForm: FormGroup;
+  // numberMask = createNumberMask({ prefix: '', thousandsSeparatorSymbol: ',', allowDecimal: true, decimalSymbol: '.' });
+  constructor(private formBuilder: FormBuilder) {
+    this.cadForm = this.formBuilder.group({
+      formaTrab: ['', Validators.required],
+      preco: ['', Validators.required]
+    });
+  }
 
   ngOnInit() {
+  }
+
+  next() {
+    console.log(this.cadForm.value);
   }
 
 }
