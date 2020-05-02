@@ -35,7 +35,7 @@
     <div class="lista">
       <ion-list>
         <ion-item *ngFor="let s of servicos; let i = index">
-          <span class="nome">{{s.servico.nome}}</span>
+          <span class="nome">{{ s.servico.nome }}</span>
           <span class="icon" slot="end">
             <ion-icon name="trash" color="danger" 
               (click)="remove(i, $event)"></ion-icon>

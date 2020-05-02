@@ -11,12 +11,9 @@ export class CadastroServicosPage implements OnInit {
 
   servicos: Array<{servico: string}>;
   servicesForm: FormGroup;
-  index: number;
-  // servico: any;
 
   constructor(private toastController: ToastController, private formBuilder: FormBuilder) {
     this.servicos = [];
-    this.index = 0;
     this.servicesForm = this.formBuilder.group({
       nome: ['', Validators.required]
     });

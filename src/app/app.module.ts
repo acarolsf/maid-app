@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import '@codetrix-studio/capacitor-google-auth';
 
 import { AddCupomComponent } from './components/add-cupom/add-cupom.component';
 import { ExibicaoComponent } from './components/exibicao/exibicao.component';
